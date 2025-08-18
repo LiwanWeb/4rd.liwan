@@ -731,27 +731,6 @@
 </div>
 
 <script>
-  window.addEventListener("load", function() {
-    // نتحقق إذا عملنا ريفرش من قبل
-    let refreshCount = sessionStorage.getItem("refreshCount") || 0;
-    refreshCount = parseInt(refreshCount);
-
-    if (refreshCount < 1) { 
-      // نزيد العداد
-      sessionStorage.setItem("refreshCount", refreshCount + 1);
-
-      // نسوي ريفرش
-      setTimeout(() => {
-        location.reload();
-      }, 1500);
-    } else {
-      // بعد ما يخلص مرتين، نوقف ونصفر العداد
-      sessionStorage.removeItem("refreshCount");
-    }
-  });
-</script>
-
-<script>
   const downloadBtn = document.getElementById('download-btn');
 
   downloadBtn.addEventListener('click', () => {
@@ -972,5 +951,6 @@ function swapColors() {
 
 </body>
 </html>
+
 
 
